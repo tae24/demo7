@@ -1,0 +1,63 @@
+.form{
+  &__container{
+    width: 90%;
+    margin: 0 auto;
+    @include tab {
+      width: 50%;
+    }
+  }
+}
+
+.input{
+  &__area{
+    margin-bottom: 2.5rem;
+  }
+  &__title{
+    @include fz(16);
+    margin-bottom: 1rem;
+  }
+  &__unit{
+    display: block;
+    margin-bottom: 1rem;
+    @include tab{
+      display: inline;
+      margin-right: 2rem;
+    }
+  }
+}
+
+.table{
+  &__container{
+    width: 100%;
+  }
+  &__unit{
+    text-align: left;
+    // display: block;
+  }
+  &__list{
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  &__text{
+    display: block;
+    margin-bottom: 1rem;
+  }
+  &__input{
+    width: 100%;
+  }
+  &__textarea{
+    resize: none;
+    width: 100%;
+  }
+}
+
+.formBox{
+  &__btnBox{
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  &__link{
+    color: cl(black);
+  }
+}

@@ -1,0 +1,856 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+  /*文字サイズの自 動調整*/
+  font-family: 'Noto Serif JP', 'Noto Serif';
+  font-style: normal;
+}
+
+body {
+  background-color: cl(white);
+}
+
+a {
+  text-decoration: none;
+  color: cl(black);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media all and (max-width: 767px) {
+  html.is-fixed,
+  html.is-fixed body {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+.footer__container {
+  height: 79px;
+}
+
+.footer__text {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+/*----------------------------------------------------------*/
+/* header */
+/*----------------------------------------------------------*/
+.header {
+  display: flex;
+}
+
+.header__container {
+  width: 100%;
+}
+
+.header__title {
+  z-index: 2;
+  height: 30px;
+  padding: 25px 30px;
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+@media (min-width: 560px) {
+  .header__title {
+    font-size: 1.8rem;
+    width: 30%;
+  }
+}
+
+@media (min-width: 960px) {
+  .header__title {
+    font-size: 2.6rem;
+    width: 30%;
+  }
+}
+
+.header__link {
+  color: #FFFFFF;
+}
+
+.burger-btn {
+  display: block;
+  width: 39px;
+  height: 39px;
+  position: relative;
+  z-index: 4;
+  border: none;
+  margin: 0 0 0 auto;
+}
+
+@media (min-width: 560px) {
+  .burger-btn {
+    display: none;
+  }
+}
+
+.bar {
+  width: 30px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #FFFFFF;
+}
+
+.bar_top {
+  top: 10px;
+}
+
+.bar_mid {
+  top: 51.25%;
+  transform: translate(-50%, -50%);
+}
+
+.bar_bottom {
+  bottom: 10px;
+}
+
+.burger-btn.close .bar_top {
+  transform: translate(-50%, 8.7px) rotate(45deg);
+  transition: transform 0.3s;
+}
+
+.burger-btn.close .bar_mid {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.burger-btn.close .bar_bottom {
+  transform: translate(-50%, -8px) rotate(-45deg);
+  transition: transform 0.3s;
+}
+
+.globalNav {
+  display: none;
+  width: 100%;
+  height: 812px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  background-color: #000;
+}
+
+@media (min-width: 560px) {
+  .globalNav {
+    position: absolute;
+    display: inline;
+    background-color: transparent;
+    height: 50px;
+  }
+}
+
+.globalNavMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 60%;
+  z-index: 999;
+}
+
+.globalNavMenu__list {
+  margin-top: 30px;
+}
+
+.globalNavMenu__link {
+  font-size: 1.6rem;
+  color: #FFFFFF;
+}
+
+@media (min-width: 560px) {
+  .globalNavMenu__link {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .globalNavMenu__link {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 560px) {
+  .globalNavMenu {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .globalNavMenu__list {
+    margin: 4rem 1.5rem 0 1.4rem;
+  }
+  .globalNavMenu__link {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+}
+
+.main__container {
+  width: 100%;
+}
+
+.main__title {
+  z-index: 2;
+  width: 100%;
+  color: #FFFFFF;
+  font-size: 3.5rem;
+  position: absolute;
+  margin-top: 110px;
+  text-align: center;
+}
+
+@media (min-width: 560px) {
+  .main__title {
+    font-size: 5rem;
+    text-align: left;
+    margin-top: 200px;
+    margin-left: 5%;
+  }
+}
+
+@media (min-width: 960px) {
+  .main__title {
+    font-size: 7rem;
+    text-align: left;
+    margin-top: 200px;
+  }
+}
+
+.main__lead {
+  z-index: 2;
+  width: 70%;
+  color: #FFFFFF;
+  font-size: 3rem;
+  position: absolute;
+  margin-top: 190px;
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 10%;
+}
+
+@media (min-width: 560px) {
+  .main__lead {
+    font-size: 3rem;
+    text-align: left;
+    margin-top: 300px;
+    margin-left: 10%;
+  }
+}
+
+@media (min-width: 960px) {
+  .main__lead {
+    font-size: 4rem;
+    text-align: left;
+    margin-top: 350px;
+  }
+}
+
+.main__img {
+  position: relative;
+  z-index: 1;
+  top: -100px;
+  width: 100%;
+  height: 599px;
+  object-fit: cover;
+}
+
+.concept__container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+@media (min-width: 560px) {
+  .concept__container {
+    width: 90%;
+  }
+}
+
+.concept__title {
+  color: #000;
+  font-size: 3rem;
+  font-weight: bold;
+  font-style: italic;
+  position: relative;
+  margin-bottom: 6rem;
+}
+
+.concept__title::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  width: 80px;
+  height: 3px;
+  margin-left: 2rem;
+  background-color: #000;
+}
+
+.concept__lead {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+}
+
+.concept__text {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 560px) {
+  .concept__text {
+    font-size: 1.4rem;
+    width: 50%;
+  }
+}
+
+@media (min-width: 960px) {
+  .concept__text {
+    font-size: 1.6rem;
+    width: 50%;
+    margin-top: 2rem;
+  }
+}
+
+.concept__imgArea {
+  margin-bottom: 4rem;
+}
+
+.concept__imgArea::after {
+  content: "Our Concept";
+  color: #f7f7f7;
+  font-size: 4rem;
+  display: block;
+  text-align: right;
+}
+
+@media (min-width: 560px) {
+  .concept__imgArea::after {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .concept__imgArea::after {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 560px) {
+  .concept__imgArea {
+    margin-left: 2rem;
+    width: 50%;
+  }
+}
+
+@media (min-width: 560px) {
+  .concept__flex {
+    display: flex;
+  }
+}
+
+.concept__img {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 560px) {
+  .concept__img {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 960px) {
+  .concept__img {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+.contact__container {
+  background-image: url(https://taeportfolio.com/demo4.taeportfolio.com/img/contact-top_bgimg.jpg);
+  background-size: cover;
+  margin: 0 auto;
+  padding-top: 5rem;
+  margin-top: 3rem;
+}
+
+.contact__title {
+  color: #FFFFFF;
+  font-size: 3rem;
+  font-weight: bold;
+  font-style: italic;
+  position: relative;
+  margin-right: 12rem;
+  text-align: right;
+}
+
+.contact__title::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  width: 80px;
+  height: 3px;
+  margin-left: 2rem;
+  background-color: #FFFFFF;
+}
+
+.contact__text {
+  font-size: 2rem;
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.contact__btnBox {
+  text-align: center;
+  margin-bottom: 7rem;
+  padding-bottom: 5rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contact__btnBox::after {
+  content: "Contact us";
+  color: #FFFFFF;
+  opacity: 0.1;
+  font-size: 4rem;
+  display: block;
+  text-align: left;
+  margin-top: 4rem;
+}
+
+@media (min-width: 560px) {
+  .contact__btnBox::after {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .contact__btnBox::after {
+    font-size: 9rem;
+  }
+}
+
+.contact__btn {
+  font-size: 1.6rem;
+  background-color: #F7D43F;
+  width: 155px;
+  height: 37px;
+  border-radius: 10px;
+}
+
+.contact__link {
+  color: #000;
+}
+
+.formBox__btn {
+  font-size: 1.6rem;
+  background-color: #F7D43F;
+  width: 155px;
+  height: 37px;
+  border-radius: 10px;
+}
+
+.formBox__link {
+  color: #000;
+}
+
+@media (min-width: 560px) {
+  .service::after {
+    content: "Our Service";
+    color: #f7f7f7;
+    display: block;
+    text-align: right;
+    font-size: 4rem;
+    width: 90%;
+  }
+}
+
+@media (min-width: 560px) and (min-width: 560px) {
+  .service::after {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 560px) and (min-width: 960px) {
+  .service::after {
+    font-size: 9rem;
+  }
+}
+
+.service__title {
+  color: #000;
+  font-size: 3rem;
+  font-weight: bold;
+  font-style: italic;
+  position: relative;
+  margin-bottom: 6rem;
+  margin-top: 8rem;
+  margin-left: 2rem;
+}
+
+.service__title::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  width: 80px;
+  height: 3px;
+  margin-left: 2rem;
+  background-color: #000;
+}
+
+@media (min-width: 560px) {
+  .service__title {
+    margin-left: 8rem;
+  }
+}
+
+.service__unit {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.service__list {
+  font-size: 2.6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 560px) {
+  .service__list {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .service__list {
+    font-size: 4rem;
+  }
+}
+
+.service__link {
+  color: #FFFFFF;
+}
+
+.service__img {
+  display: block;
+  width: 100%;
+}
+
+.service__imgUnit {
+  margin: 0 auto;
+  overflow: hidden;
+  background: #000;
+}
+
+.service__imgUnit img {
+  width: 100%;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.service__imgUnit:hover img {
+  opacity: 0.6;
+  transition-duration: 0.3s;
+}
+
+.service__box::after {
+  content: "Our Service";
+  color: #f7f7f7;
+  font-size: 4rem;
+  display: block;
+  text-align: right;
+  margin-right: 2rem;
+}
+
+@media (min-width: 560px) {
+  .service__box::after {
+    display: none;
+  }
+}
+
+@media (min-width: 560px) {
+  .service__box {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.works__container {
+  background-image: url(https://taeportfolio.com/demo4.taeportfolio.com/imges/works-bgimg.jpg);
+  background-size: cover;
+  margin: 0 auto;
+  padding-top: 9rem;
+}
+
+.works__box {
+  margin-top: 5rem;
+}
+
+.works__title {
+  color: #FFFFFF;
+  font-size: 3rem;
+  font-weight: bold;
+  font-style: italic;
+  position: relative;
+  margin-right: 12rem;
+  text-align: right;
+}
+
+.works__title::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  width: 80px;
+  height: 3px;
+  margin-left: 2rem;
+  background-color: #FFFFFF;
+}
+
+@media (min-width: 560px) {
+  .worksBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.worksBox__unit {
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 560px) {
+  .worksBox__unit {
+    width: 30%;
+  }
+}
+
+.worksBox__text {
+  font-size: 1.6rem;
+  background-color: #FFFFFF;
+  height: 130px;
+  padding: 2rem 1rem 0 1rem;
+  line-height: 3rem;
+}
+
+@media (min-width: 560px) {
+  .worksBox__text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .worksBox__text {
+    font-size: 1.6rem;
+  }
+}
+
+.worksBox__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.worksBox__btnBox {
+  text-align: center;
+  margin-bottom: 7rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.worksBox__btnBox::after {
+  content: "Our Works";
+  color: #FFFFFF;
+  opacity: 0.1;
+  padding-bottom: 3rem;
+  font-size: 4rem;
+  display: block;
+  text-align: left;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 560px) {
+  .worksBox__btnBox::after {
+    font-size: 6rem;
+  }
+}
+
+.worksBox__btn {
+  font-size: 1.6rem;
+  background-color: #F7D43F;
+  width: 155px;
+  height: 37px;
+  border-radius: 10px;
+}
+
+.worksBox__link {
+  color: #000;
+}
+
+.formMain__container {
+  width: 100%;
+}
+
+.formMain__title {
+  z-index: 2;
+  width: 90%;
+  color: #FFFFFF;
+  font-size: 3.7rem;
+  position: absolute;
+  margin-top: 110px;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.formMain__title::after {
+  content: "Our Concept";
+  color: #FFFFFF;
+  opacity: 0.1;
+  font-size: 4rem;
+  display: block;
+  text-align: left;
+  margin-top: 4rem;
+}
+
+@media (min-width: 560px) {
+  .formMain__title::after {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .formMain__title::after {
+    font-size: 9rem;
+  }
+}
+
+@media (min-width: 560px) {
+  .formMain__title {
+    font-size: 4rem;
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: 960px) {
+  .formMain__title {
+    font-size: 6rem;
+  }
+}
+
+.formMain__img {
+  position: relative;
+  z-index: 1;
+  top: -100px;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+@media (min-width: 560px) {
+  .formMain {
+    height: 435px;
+  }
+}
+
+.form__container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 560px) {
+  .form__container {
+    width: 50%;
+  }
+}
+
+.input__area {
+  margin-bottom: 2.5rem;
+}
+
+.input__title {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.input__unit {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 560px) {
+  .input__unit {
+    display: inline;
+    margin-right: 2rem;
+  }
+}
+
+.table__container {
+  width: 100%;
+}
+
+.table__unit {
+  text-align: left;
+}
+
+.table__list {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.table__text {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.table__input {
+  width: 100%;
+}
+
+.table__textarea {
+  resize: none;
+  width: 100%;
+}
+
+.formBox__btnBox {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.formBox__link {
+  color: #000;
+}
+/*# sourceMappingURL=style.css.map */

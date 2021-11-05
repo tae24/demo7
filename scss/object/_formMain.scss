@@ -1,0 +1,50 @@
+.formMain{
+  &__container{
+    width: 100%;
+  }
+  &__title{
+    z-index: 2;
+    width: 90%;
+    color: cl(white);
+    @include fz(37);
+    position: absolute;
+    margin-top: 110px;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    &::after{
+      content: "Our Concept";
+      color: cl(white);
+      opacity: 0.1;
+      @include fz(40);
+      display: block;
+      text-align: left;
+      margin-top: 4rem;
+      @include tab{
+        @include fz(60);
+      }
+      @include pc{
+        @include fz(90);
+      }
+    }
+    @include tab {
+      @include fz(40);
+      margin-top: 60px;
+    }
+    @include pc {
+      @include fz(60);
+    }
+  }
+  // htmlに画像
+    &__img{
+      position: relative;
+      z-index: 1;
+      top: -100px;
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+    }
+    @include tab{
+      height: 435px;
+    }
+}

@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+// @include fz(30);
+//--------------------------------------------------
+
+
+@mixin fz($size: 16){
+  font-size: ($size / 10) + rem;
+}
+
+
+html{
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;    
+  /*文字サイズの自 動調整*/
+  font-family: 'Noto Serif JP', 'Noto Serif';
+  font-style: normal;
+}
+
+body{
+  background-color: cl(white);
+  // font-family: 'Noto Serif JP', 'Noto Serif';
+}
+
+// 下線
+a{
+  text-decoration:none;
+  color: cl(black);
+}
+a:hover{
+  text-decoration: underline;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+html.is-fixed,
+html.is-fixed body {
+@media all and (max-width: 767px) {
+    height: 100%;
+    overflow: hidden;
+}
+}
+// UTILITY
+//
+//--------------------------------------------------
+// display: none!important;
+
+
+// .pc {
+//   @include sp {
+//       display: none;
+//   }
+// }
+
+// .sp {
+//   @include pc {
+//       display: none;
+//   }
+// }
+
+// display: none!important;
+
+// * {
+//     outline: 2px solid red;
+// }

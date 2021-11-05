@@ -1,0 +1,69 @@
+@charset "utf-8"; 
+
+// ボタンのmixin
+// @include btn
+// @include titleSp(cl())
+// @include titlePc(cl())
+// @include title__sp(cl())
+// @include title__pcl())
+//--------------------------------------------------
+
+
+@mixin btn {
+  @include fz(16);
+  background-color: cl(yellow);
+  width: 155px;
+  height: 37px;
+  border-radius: 10px;
+}
+
+// タイトルのみ
+@mixin titleSp ($value){
+  color: $value;
+  @include fz(30);
+  font-weight: bold;
+  font-style:italic;
+  position: relative;
+}
+
+@mixin titlePc ($value){
+  color: $value;
+  font-size: 6rem;
+  font-weight: bold;
+  font-style:italic;
+  position: relative;
+}
+
+
+// タイトルと線
+@mixin title__sp ($value){
+  color: $value;
+  font-size: 3rem;
+  font-weight: bold;
+  font-style:italic;
+  position: relative;
+  &::after{
+    position: absolute;
+    content: "";
+    top: 50%;
+    width: 80px;
+    height: 3px;
+    margin-left: 2rem;
+    background-color: $value;
+  }
+}
+@mixin title__pc ($value){
+  color: $value;
+  font-size: 6rem;
+  font-weight: bold;
+  font-style:italic;
+  position: relative;
+  &::after{
+    position: absolute;
+    content: "";
+    top: 50%;
+    width: 100px;
+    height: 1px;
+    background-color: $value;
+  }
+}

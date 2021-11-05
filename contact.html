@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>クリスタデザインカンプ中級</title>
+  <meta name="description" content="【オフィスの案内】">   
+  <meta name="format-detection" content="telephone=no">
+  <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="icon" sizes="192x192" href="apple-touch-icon.png"> -->
+  <!-- <link href=“https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP&display=swap” rel=“stylesheet”> -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <script src="https://kit.fontawesome.com/56bbf41bb5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header header__container">
+    <h1 class="header__title"><a class="header__link" href="index.html">Cresta Design</a></h1>
+      <!-- ③ハンバーガーボタン -->
+      <div class="burger-btn">
+        <span class="bar bar_top"></span>
+        <span class="bar bar_mid"></span>
+        <span class="bar bar_bottom"></span>
+      </div>
+      <nav class="globalNav header__nav">
+        <ul class="globalNavMenu globalNav__menu">
+          <li class="globalNavMenu__list"><a class="globalNavMenu__link" href="index.html">Concept</a></li>
+          <li class="globalNavMenu__list"><a class="globalNavMenu__link" href="index.html">Service</a></li>
+          <li class="globalNavMenu__list"><a class="globalNavMenu__link" href="index.html">Works</a></li>
+          <li class="globalNavMenu__list"><a class="globalNavMenu__link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+  </header>
+  <!-- メイン -->
+  <main class="formMain">
+    <div class="formMain__container">
+      <h2 class="formMain__title">Contact</h2>
+      <div>
+        <div class="swiper">
+          <picture>
+            <source media="(min-width:560px)" srcset="imges/contact_t_pc.jpg" alt="オフィスエントランスからの全体の様子">
+            <img class="formMain__img" src="imges/contact_intop_sp.jpg" alt="オフィスエントランスからの全体の様子">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- フォーム -->
+  <div class="form form__container">
+    <form class="input input__area" name="form" action="" method="post">
+      <p class="input__title">お問い合わせ内容</p>
+      <label class="input__unit"><input class="input__text" type="checkbox" id="check1">資料請求</label>
+      <label class="input__unit"><input class="input__text" type="checkbox" id="check2">お電話でのご相談を希望</label>
+      <label class="input__unit"><input class="input__text" type="checkbox" id="check2">申し込み</label>
+    </form> 
+    <form class="table table__container" action="#" method="post">
+      <table class="table__area">
+        <tr class="table__unit">
+          <th class="table__list" >担当者名</th>
+          <td class="table__text" ><input class="table__input" type="text" name="name" autocomplete="name" /></td>
+        </tr>
+        <tr class="table__unit" >
+          <th class="table__list" >電話番号</th>
+          <td class="table__text" ><input class="table__input" type="text" name="tel" autocomplete="tel" /></td>
+        </tr>
+        <tr class="table__unit" >
+          <th class="table__list" >メールアドレス</th>
+          <td class="table__text" ><input class="table__input" type="email" name="email" autocomplete="email" /></td>
+        </tr>
+        <tr class="table__unit" >
+          <th class="table__list" >その他</th>
+          <td class="table__text" >
+            <textarea class="table__textarea" name="other" cols="130" rows="15"></textarea>
+          </td>
+        </tr>
+        <!-- <tr class="table__unit" >
+          <td class="table__" colspan="2">
+            <input class="table__" type="submit" value="送信">
+          </td>
+        </tr> -->
+      </table>
+      <div class="formBox__btnBox">
+        <button class="btn formBox__btn"><a class="formBox__link" href="#">View more</a></button>
+      </div>
+    </form>
+  </div>
+
+  <!-- フッター -->
+  <footer class="footer footer__container">
+    <p class="footer__text"><small class="footer__area">©︎cresta.design all rights reserved</small></p>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>

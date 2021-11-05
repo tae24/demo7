@@ -1,0 +1,78 @@
+.concept{
+  &__container{
+    width: 95%;
+    margin: 0 auto;
+    // margin-top: 10rem;
+    @include tab{
+      width: 90%;
+    }
+  }
+  &__title{
+    @include title__sp(cl(black));
+    margin-bottom: 6rem;
+  }
+  &__lead{
+    text-align: center;
+    @include fz(20);
+    font-weight: bold;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+  }
+  &__text{
+    @include fz(16);
+    line-height: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+    @include tab{
+      @include fz(14);
+      width: 50%;
+      // margin-top: 2rem;
+    }
+    @include pc{
+      @include fz(16);
+      width: 50%;
+      margin-top: 2rem;
+    }
+  }
+  &__imgArea{
+    margin-bottom: 4rem;
+    &::after{
+      content: "Our Concept";
+      // color: cl(black);
+      // opacity: 0.1;
+      color: rgb(247, 247, 247);
+      @include fz(40);
+      display: block;
+      text-align: right;
+      @include tab{
+        @include fz(40);
+      }
+      @include pc{
+        @include fz(60);
+      }
+    }
+    @include tab{
+      margin-left: 2rem;
+      width: 50%;
+    }
+  }
+  &__flex{
+    @include tab{
+      display: flex;
+    }
+  }
+  &__img{
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 5rem;
+    @include tab{
+      width: 70%;
+      margin: 0 auto;
+    }
+    @include pc{
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+}
+

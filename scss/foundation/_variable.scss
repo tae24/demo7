@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+// COLORS
+// color: $black;
+// background-color: $black; 
+//--------------------------------------------------
+
+// @charset "UTF-8";
+
+// black
+// $black: #000;
+// white
+// $white: #FFFFFF;
+// yellow
+// $yellow: #F7D43F;
+//navy
+// $navy: #282F35;
+
+// COLORS
+// color: cl(white);
+// background-color: cl(black);
+//--------------------------------------------------
+
+
+$colors: (
+  white: #FFFFFF,
+  black: #000,
+  yellow: #F7D43F,
+  navy: #282F35,
+);
+
+@function cl($key) {
+  @return map-get($colors, $key);
+}
+
+// color: cl(white);
+// background-color: cl(black);
+
